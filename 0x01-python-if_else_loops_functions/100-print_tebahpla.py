@@ -1,12 +1,3 @@
 #!/usr/bin/python3
-def print_tebahpla():
-    res = ""
-    for c in range(122, 96, -1):
-        if c % 2 == 0:
-            res += chr(c)
-        else:
-            res += chr(c - 32)
-    print(res, end="")
-
-
-print_tebahpla()
+for ch in range(122, 96, -1):
+    print("{:c}".format(ch - 32) if ch % 2 != 0 else "{:c}".format(ch), end="")
