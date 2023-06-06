@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 def print_tebahpla():
     for c in range(122, 96, -1):
         if c % 2 == 0:
