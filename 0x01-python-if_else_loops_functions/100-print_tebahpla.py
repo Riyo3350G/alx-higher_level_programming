@@ -5,7 +5,7 @@ def print_tebahpla():
         if c % 2 == 0:
             res += chr(c)
         else:
-            ores += chr(c - 32)
+            res += chr(c - 32)
     print(res, end="")
 
 
