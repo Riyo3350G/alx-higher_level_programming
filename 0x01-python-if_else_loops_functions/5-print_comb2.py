@@ -2,5 +2,6 @@
 for digit in range(0, 100):
     if digit == 99:
         print("{0:02d}".format(digit), end="\n")
-    print("{:02d}, ".format(digit), end="")
+    else:
+        print("{:02d}, ".format(digit), end="")
     
