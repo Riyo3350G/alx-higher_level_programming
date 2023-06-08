@@ -3,7 +3,7 @@
 import sys
 if __name__ == "__main__":
     rev = 0
-    arg_ctr = len(argv)
+    arg_ctr = len(sys.argv)
     if arg_ctr == 1:
         print("0")
     else:
