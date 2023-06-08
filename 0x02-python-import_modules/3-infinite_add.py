@@ -8,5 +8,5 @@ if __name__ == "__main__":
         print("0")
     else:
         for i in range(1, arg_ctr):
-            rev += int(argv[i])
+            rev += int(sys.argv[i])
         print(rev)
