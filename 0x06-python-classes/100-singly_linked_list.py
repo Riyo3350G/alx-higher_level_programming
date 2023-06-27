@@ -63,6 +63,13 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+    def __str__(self):
+        """Represents the class object as a string.
+
+        Returns: The class object represented as a string.
+        """
+        return str(self.data)
+
 
 class SinglyLinkedList:
     """
