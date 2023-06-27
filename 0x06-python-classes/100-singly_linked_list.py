@@ -110,6 +110,13 @@ class SinglyLinkedList:
             value: value.
         """
         new_node = Node(value)
-        new_node.next_node = self.__head
-        self.__head = new_node
+        if self.__head is None or value < self.__head.data:
+            new_node.next_node = self.__head
+            self.__head = new_node
+        else:
+            temp_var = self.__head
+            while temp_var.next_node is not None and value >= temp_var.next_node.data:
+                temp_var = temp_var.next_node
+            new_node.next_node = temp_var.next_node
+            temp_var.next_node = new_node
 
