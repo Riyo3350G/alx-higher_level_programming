@@ -7,7 +7,7 @@ class Square:
     Class that defines properties of square.
 
     Attributes:
-        size: size of a square.
+        size: size of a square (1 side).
     """
     def __init__(self, size=0, position=(0, 0)):
         """Creates new instances of square.
@@ -37,7 +37,7 @@ class Square:
         """Property setter for size.
 
         Args:
-            value (int): size of a square (1 side).
+            value (int): size of a square.
 
         Raises:
             TypeError: size must be an integer.
@@ -90,7 +90,7 @@ class Square:
                 print("#" * (self.__size))
 
     def __str__(self):
-        """Prints square offsetting it by position with symbol 
+        """Prints square offsetting it by position
 
         Returns: The square.
         """
