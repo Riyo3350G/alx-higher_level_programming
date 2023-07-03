@@ -1,0 +1,42 @@
+Test cases for 2-matrix_divided
+===================================
+
+The 0-matrix_divided module takes a matrix of floats and ints and a divider as arguments and returns a new matrix
+
+Usage
+=====
+
+Importing funct from the module:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Tests normal
+    >>> m = [[2, 4, 6],[8, 10, 12]]
+    >>> matrix_divided(m, 2)
+    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+Tests unmodified matrix
+    >>> m = [[2, 4, 6],[8, 10, 12]]
+    >>> matrix_divided(m, 2)
+    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+    >>> print(m)
+    [[2, 4, 6], [8, 10, 12]]
+
+Tests empty matrix
+    >>> matrix_divided([], 2)
+    Traceback (most recent call last):
+                  ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Tests different size rows
+    >>> m = [[4, 6],[8, 10, 12]]
+    >>> matrix_divided(m, 2)
+    Traceback (most recent call last):
+                  ...
+    TypeError: Each row of the matrix must have the same size
+
+Test case div == 0
+    >>> m = [[2, 4, 6],[8, 10, 12]]
+    >>> matrix_divided(m, 0)
+    Traceback (most recent call last):
+                  ...
+    ZeroDivisionError: division by zero
