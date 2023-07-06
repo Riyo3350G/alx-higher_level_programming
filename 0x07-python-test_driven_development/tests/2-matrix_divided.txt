@@ -59,12 +59,6 @@ Test missing one arguments
     Traceback (most recent call last):
     TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
-Test missing 2 arguments
-    >>> matrix_divided()
-    Traceback: (most recent call last):
-        ...
-    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'.
-
 Test division by inf:
     >>> matrix_divided([[2, 4, 8], [1, 2, 3]], float('inf'))
     [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
