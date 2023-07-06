@@ -54,6 +54,12 @@ Test 1st arg None:
         ...
     NameError: Name 'none' is not defined.
 
+Test missing 1 arguments
+    >>> matrix_divided(2)
+    Traceback (most recent call last):
+              ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
 Test missing 2 arguments
     >>> matrix_divided()
     Traceback: (most recent call last):
