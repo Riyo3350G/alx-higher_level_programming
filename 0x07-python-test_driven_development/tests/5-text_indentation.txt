@@ -7,9 +7,9 @@ import module:
 Test text with each seperator:
     >>> text_indentation("hello. my? baby:")
     hello.
-
+    
     my?
-
+    
     baby:
 
 Test two arguments:
