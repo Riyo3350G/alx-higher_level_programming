@@ -40,3 +40,26 @@ Test case div == 0
     Traceback (most recent call last):
                   ...
     ZeroDivisionError: division by zero
+
+Test case matrix string
+    >>> matrix = "not a list"
+    >>> print(matrix_divided(matrix, 3))
+    Traceback (most recent call last):
+		  ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test 1st arg None:
+    >>> matrix_divided(none, 1)
+    Traceback: (most recent call last):
+        ...
+    NameError: Name 'none' is not defined.
+
+Test missing 2 arguments
+    >>> matrix_divided()
+    Traceback: (most recent call last):
+        ...
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'.
+
+Test division by inf:
+    >>> matrix_divided([[2, 4, 8], [1, 2, 3]], float('inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
