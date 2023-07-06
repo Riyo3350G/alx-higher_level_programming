@@ -68,3 +68,10 @@ Test missing 2 arguments
 Test division by inf:
     >>> matrix_divided([[2, 4, 8], [1, 2, 3]], float('inf'))
     [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Test div string:
+   >>> matrix_divided([[3,9], [12, 15]], "string")
+   Traceback (most recent call last):
+          ...
+   TypeError: div must be a number
+
