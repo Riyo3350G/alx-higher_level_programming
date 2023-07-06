@@ -45,7 +45,7 @@ Test case matrix string
     >>> matrix = "not a list"
     >>> print(matrix_divided(matrix, 3))
     Traceback (most recent call last):
-		  ...
+                  ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Test 1st arg None:
@@ -96,3 +96,13 @@ One element string:
    Traceback (most recent call last):
          ...
    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Missing one arg:
+    >>> matrix_divided([[3, 4]])
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Missing 2 args:
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
