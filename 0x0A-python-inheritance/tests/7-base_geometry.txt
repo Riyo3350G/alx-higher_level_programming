@@ -73,3 +73,24 @@ Testing for non-integer types:
          Traceback (most recent call last):
          ...
          TypeError: complex must be an integer
+
+Testing for no arguments to integer_validator:
+----------------------------------------------
+	 >>> b.integer_validator()
+	 Traceback (most recent call last):
+         ...
+	 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Testing for only 1 argument to integer_validator:
+-------------------------------------------------
+	 >>> b.integer_validator("integer")
+	 Traceback (most recent call last):
+         ...
+	 TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Testing for too many arguments:
+-------------------------------
+	 >>> b.integer_validator("integer", 1, 2)
+	 Traceback (most recent call last):
+         ...
+	 TypeError: integer_validator() takes 3 positional arguments but 4 were given
