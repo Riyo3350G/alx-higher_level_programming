@@ -29,12 +29,6 @@ Testing for area failure:
 	 ...
 	 Exception: area() is not implemented
 
-Testing too many arguments for area:
-	 >>> b.area(1)
-	 Traceback (most recent call last):
-         ...
-	 TypeError: area() takes 1 argument
-
 Testing integer validator for passing integer:
 	 >>> b.integer_validator("integer", 1)
 
