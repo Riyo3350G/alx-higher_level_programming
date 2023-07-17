@@ -3,6 +3,7 @@
 import unittest
 from models.square import Square
 
+
 class TestSquare(unittest.TestCase):
     def test_constructor(self):
         s = Square(5, 2, 3, 7)
@@ -45,6 +46,7 @@ class TestSquare(unittest.TestCase):
             "y": 3
         }
         self.assertEqual(s.to_dictionary(), expected_dict)
+
 
 if __name__ == "__main__":
     unittest.main()
