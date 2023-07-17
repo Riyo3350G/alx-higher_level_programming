@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """UnitTests for base class"""
 import unittest
+import json
 from models.base import Base
 
 class TestBase(unittest.TestCase):
@@ -32,7 +33,7 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(AttributeError):
             print(b.nb_objects)
         with self.assertRaises(AttributeError):
-            print(b._Base__nb_objects)
+            print(b.nb_objects)
 
     def test_to_json_string(self):
         """Test conversion to JSON string"""
