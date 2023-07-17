@@ -5,10 +5,10 @@ import json
 from models.base import Base
 
 class TestBase(unittest.TestCase):
-    """Test cases for Base class"""
+    """Test cases to Base class"""
 
     def test_init_with_too_many_args(self):
-        """Test initialization with too many arguments"""
+        """Test initialization with too many args"""
         with self.assertRaises(TypeError):
             b = Base(1, 1)
 
@@ -23,12 +23,12 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b98.id, 98)
 
     def test_init_with_no_id_after_set(self):
-        """Test initialization with no id after setting id"""
+        """Test initialization with no id aftr setting id"""
         b2 = Base()
         self.assertEqual(b2.id, 2)
 
     def test_nb_objects_private(self):
-        """Test nb_objects as a private instance attribute"""
+        """Test nb_objects as a private instance attrbte"""
         b = Base(3)
         with self.assertRaises(AttributeError):
             print(b.nb_objects)
@@ -36,7 +36,7 @@ class TestBase(unittest.TestCase):
             print(b.nb_objects)
 
     def test_to_json_string(self):
-        """Test conversion to JSON string"""
+        """Test conversion to a JSON string"""
         Base._Base__nb_objects = 0
         d1 = {"id": 9, "width": 5, "height": 6, "x": 7, "y": 8}
         d2 = {"id": 2, "width": 2, "height": 3, "x": 4, "y": 0}
@@ -46,7 +46,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(d, [d1, d2])
 
     def test_to_json_string_with_empty_list(self):
-        """Test conversion to JSON string with empty list"""
+        """Test conversion to JSON string with an empty list"""
         json_s = Base.to_json_string([])
         self.assertTrue(type(json_s) is str)
         self.assertEqual(json_s, "[]")
@@ -58,7 +58,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(json_s, "[]")
 
     def test_from_json_string(self):
-        """Test conversion from JSON string"""
+        """Test conversion from a JSON string"""
         json_str = '[{"id": 9, "width": 5, "height": 6, "x": 7, "y": 8}, \
                      {"id": 2, "width": 2, "height": 3, "x": 4, "y": 0}]'
         json_l = Base.from_json_string(json_str)
@@ -72,7 +72,7 @@ class TestBase(unittest.TestCase):
                          {"id": 2, "width": 2, "height": 3, "x": 4, "y": 0})
 
     def test_from_json_string_with_empty_string(self):
-        """Test conversion from empty JSON string"""
+        """Test conversion from an empty JSON string"""
         self.assertEqual([], Base.from_json_string(""))
 
     def test_from_json_string_with_none(self):
