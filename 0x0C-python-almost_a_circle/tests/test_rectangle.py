@@ -108,8 +108,8 @@ class TestRectangle(unittest.TestCase):
 
     def test_area(self):
         """Test for area"""
-        self.assertEqual(self.r1.area(), 6)
-        self.assertEqual(self.r2.area(), 100)
+        self.assertEqual(self.r1.area(), 100)
+        self.assertEqual(self.r2.area(), 6)
 
     def area_arg(self):
         """Test many args for area()"""
