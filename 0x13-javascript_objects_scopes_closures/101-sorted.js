@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-const data = require('./101-data.js');
+const dict = require('./101-data.js');
 
 const result = {};
-const entries = data.dict;
+const entries = dict.dict;
 
 for (const key in entries) {
   const occurrence = entries[key];
