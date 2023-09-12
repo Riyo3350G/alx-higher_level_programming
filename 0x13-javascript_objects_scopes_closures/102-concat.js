@@ -7,4 +7,8 @@ const distFile = process.argv[4];
 
 const contentA = fs.readFileSync(fileA);
 const contentB = fs.readFileSync(fileB);
-fs.writeFileSync(distFile, contentA + '\n' + contentB, 'utf-8');
+fs.writeFile(distFile, contentA + contentB, 'utf-8', (err) => {
+  if (err) {
+    throw err;
+  }
+});
