@@ -1,6 +1,5 @@
 #!/usr/bin/node
 
-
 const data = require('./101-data.js');
 
 const result = {};
