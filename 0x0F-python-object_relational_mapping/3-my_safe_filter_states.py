@@ -10,7 +10,7 @@ if __name__ == "__main__":
                             passwd=sys.argv[2], db=sys.argv[3])
     cur = connc.cursor()
     cur.execute("SELECT * FROM states WHERE name = \
-        %s ORDER BY id ASC", sys.argv[4])
+        %s ORDER BY id ASC", [sys.argv[4]])
     row = cur.fetchall()
     for state in row:
         print(state)
