@@ -2,7 +2,7 @@
 """file similar to model_state.py named model_city.py
 that contains the class definition of a City"""
 from sqlalchemy import Column, String, Integer, ForeignKey
-from model_state import Base
+from relationship_state import Base
 
 
 class City(Base):

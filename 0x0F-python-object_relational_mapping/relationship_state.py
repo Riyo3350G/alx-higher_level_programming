@@ -4,7 +4,6 @@ State and an instance Base = declarative_base()"""
 from sqlalchemy import Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
-from relationship_city import City, Base
 
 Base = declarative_base()
 
