@@ -15,4 +15,6 @@ if __name__ == "__main__":
 
     request = urllib.request.Request(url, data=encoded_data, method='POST')
     with urllib.request.urlopen(request) as response:
-        print(response.read().decode('utf-8'))
+        response_content = response.read()
+        decoded_response = response_content.decode('utf-8')
+        print(decoded_response)
