@@ -8,14 +8,14 @@ request(apiUrl, function (err, response, body) {
   if (err) {
     console.log(err);
   } else {
-    const results = JSON.parse(body);
-    for (const film of results.results) {
+    const films = JSON.parse(body).results;
+    for (const film of films) {
       for (const character of film.characters) {
-        if (character.includes(characterId)) {
+        if (character.endsWith(characterId + '/')) {
           count++;
         }
       }
     }
+    console.log(count);
   }
 });
-console.log(count);
